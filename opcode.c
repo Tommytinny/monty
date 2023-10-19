@@ -34,7 +34,7 @@ void push(stack_t **stack, unsigned int line_number)
 void pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *list = *stack;
-	
+
 	(void)line_number;
 
 	while (list != NULL)
@@ -63,7 +63,7 @@ void pint(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	while (i == 1)
 	{
 		fprintf(stdout, "%d\n", list->n);

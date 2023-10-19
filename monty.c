@@ -15,11 +15,6 @@ int main(int argc, char **args)
 {
 	FILE *file;
 	char *fname;
-	//char line[BUFFER_LINE];
-	//char *instruct;
-	//int line_number;
-	//char *nvalue;
-	//void (*f)(stack_t **, unsigned int);
 
 	if (argc != 2)
 	{

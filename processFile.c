@@ -14,8 +14,8 @@ void processFile(FILE *file, stack_t *stack)
 	char *instruct;
 	int line_number;
 	char *nvalue;
+	size_t pos;
 	void (*f)(stack_t **, unsigned int);
-
 
 	line_number = 1;
 	while (fgets(line, sizeof(line), file) != NULL)
@@ -24,34 +24,26 @@ void processFile(FILE *file, stack_t *stack)
 		nvalue = strtok(NULL, " ");
 		if (nvalue == NULL)
 		{
-			size_t pos = strcspn(instruct,"\n");
+			pos = strcspn(instruct, "\n");
 			instruct[pos] = '\0';
 			f = get_opcode_func(instruct);
-
 			if (f == NULL)
-			{
 				fprintf(stderr, "L%d: unknown instruction %s\n", line_number, instruct);
-			}
 			else
-			{
 				f(&stack, line_number);
-			}
 		}
 		else
 		{
 			value.val = atoi(nvalue);
-			
+
 			f = get_opcode_func(instruct);
 			if (f == NULL)
-			{
 				fprintf(stderr, "L%d: unknown instruction %s\n", line_number, instruct);
-			}
 
 			f(&stack, line_number);
 		}
 
 		line_number++;
-		
 	}
 
 

@@ -13,10 +13,6 @@ void (*get_opcode_func(char *s))(stack_t **, unsigned int)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
-		/**{"pop", pop},
-		{"swap", swap},
-		{"add", add},
-		{"nop", nop},*/
 		{NULL, NULL}
 	};
 	int i = 0;
