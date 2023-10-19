@@ -1,8 +1,5 @@
 #include "monty.h"
 
-stack_t *stack = NULL;
-val_t value;
-
 /**
  * main - entry point
  * @argc: arguments count
@@ -13,6 +10,7 @@ val_t value;
 
 int main(int argc, char **args)
 {
+	stack_t *stack = NULL;
 	FILE *file;
 	char *fname;
 
