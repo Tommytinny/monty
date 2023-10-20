@@ -10,7 +10,6 @@
 
 void processFile(FILE *file, stack_t *stack)
 {
-	val_t value;
 	char line[BUFFER_LINE];
 	char *instruct;
 	int line_number, val;

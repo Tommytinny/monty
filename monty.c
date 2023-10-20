@@ -7,7 +7,6 @@
  *
  * Return: 0 on success
  */
-
 int main(int argc, char **args)
 {
 	stack_t *stack = NULL;
@@ -20,6 +19,7 @@ int main(int argc, char **args)
 		exit(EXIT_FAILURE);
 	}
 
+
 	fname = args[1];
 	file = fopen(fname, "r");
 
@@ -31,5 +31,6 @@ int main(int argc, char **args)
 
 	processFile(file, stack);
 
+	free_stack(&stack, 0);
 	return (0);
 }
