@@ -1,7 +1,9 @@
 #include "monty.h"
 
 /**
- * free - free all allocated memories
+ * free_stack - free all allocated memories
+ * @stack: pointer to the head node pointer of stack
+ * @line_number: the line_number in file
  *
  * Return: nothing
  */
