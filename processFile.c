@@ -28,7 +28,10 @@ void processFile(FILE *file, stack_t *stack)
 			instruct[pos] = '\0';
 			f = get_opcode_func(instruct);
 			if (f == NULL)
+			{
 				fprintf(stderr, "L%d: unknown instruction %s\n", line_number, instruct);
+				exit(EXIT_FAILURE);
+			}
 			else
 				f(&stack, line_number);
 		}
@@ -37,7 +40,10 @@ void processFile(FILE *file, stack_t *stack)
 			val = atoi(nvalue);
 			f = get_opcode_func(instruct);
 			if (f == NULL)
+			{
 				fprintf(stderr, "L%d: unknown instruction %s\n", line_number, instruct);
+				exit(EXIT_FAILURE);
+			}
 			if (strcmp(instruct, "push") == 0)
 				f(&stack, val);
 			else
