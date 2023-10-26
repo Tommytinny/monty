@@ -22,6 +22,6 @@ void (*get_opcode_func(char *s, unsigned int line))(stack_t **, unsigned int)
 		i++;
 
 	if (instruct[i].f == NULL)
-		error(instruct[i].opcode, line);
+		error(s, line);
 	return (instruct[i].f);
 }
