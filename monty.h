@@ -57,7 +57,9 @@ typedef struct instruction_s
 
 void processFile(FILE *file, stack_t *stack);
 void error(char *instruct, int line_number);
-void (*get_opcode_func(char *s))(stack_t **, unsigned int);
+void printUsageError(int line_number, char *instruct);
+void checklines(char *instruct, char *nvalue, int line_number, int val, stack_t *stack);
+void (*get_opcode_func(char *s, unsigned int line))(stack_t **, unsigned int);
 void push(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);

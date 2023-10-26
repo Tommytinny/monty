@@ -31,6 +31,5 @@ int main(int argc, char **args)
 
 	processFile(file, stack);
 
-	free_stack(&stack, 0);
 	return (0);
 }

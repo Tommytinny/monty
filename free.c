@@ -14,10 +14,10 @@ void free_stack(stack_t **stack, unsigned int line_number)
 
 	(void)line_number;
 
-	while (list != NULL)
+	while (list)
 	{
 		current = list;
-		list = current->next;
+		list = list->next;
 		free(current);
 	}
 }
