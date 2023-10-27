@@ -75,6 +75,6 @@ void processFile(FILE *file, stack_t *stack)
 		}
 		line_number++;
 	}
-	fclose(file);
 	free_stack(&stack, 0);
+	fclose(file);
 }

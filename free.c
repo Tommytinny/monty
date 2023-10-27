@@ -9,15 +9,15 @@
  */
 void free_stack(stack_t **stack, unsigned int line_number)
 {
-	stack_t *current;
+	stack_t *curr;
 	stack_t *list = *stack;
 
 	(void)line_number;
 
 	while (list)
 	{
-		current = list;
+		curr = list;
 		list = list->next;
-		free(current);
+		free(curr);
 	}
 }
