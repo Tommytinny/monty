@@ -17,6 +17,11 @@ void (*get_opcode_func(char *s, unsigned int line))(stack_t **, unsigned int)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"nop", nop},
+		{"sub", sub},
+		{"div", divide},
+		{"mul", mul},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 	int i = 0;

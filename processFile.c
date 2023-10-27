@@ -46,7 +46,7 @@ void processFile(FILE *file, stack_t *stack)
 	{
 		instruct = strtok(line, " \n");
 		nvalue = strtok(NULL, " \n");
-		if (instruct == NULL)
+		if (instruct == NULL || strcmp(instruct, "#") == 0)
 		{
 			line_number++;
 			continue;
